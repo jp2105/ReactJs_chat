@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import TempreatureCalculator from '../src/Component/TempreatureCalculator'
+import DesignDemo from '../src/Component/DesignDemo'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
