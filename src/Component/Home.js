@@ -46,8 +46,18 @@ class Home extends React.Component {
 		this.sendMsg=''
 
 	}
+	// componentWillReceiveProps (nextProps, nextContext) {
+	// 	console.log(nextProps.chats)
+	// 	console.log(this.props.chats)
+	// 	debugger
+	// 	if(this.props.chats && this.props.chats.hasOwnProperty('allMsg') && nextProps.chats.allMsg!=this.props.chats.allMsg){
+	//
+	// 		this.props._loadChats(this.state.currentUser,this.state.chatUser)
+	// 	}
+	// }
 
 	componentDidMount () {
+		debugger
 		this._fillUsers();
 	}
 
@@ -56,6 +66,7 @@ class Home extends React.Component {
 	};
 
 	_chatUserClick=(temp)=>{
+		debugger
 		this.setState({chatUser:temp},()=>this.props._loadChats(this.state.currentUser,this.state.chatUser))
 	}
 
@@ -64,6 +75,7 @@ class Home extends React.Component {
 	};
 
 	_fillUsers=()=>{
+		debugger
 		const {currentUser,allUsers}=this.state
 		var temp=[];
 		this.db.collection("users")
@@ -82,7 +94,9 @@ class Home extends React.Component {
 						//fail
 						console.log("fail")
 					}
-					this.setState({allUsers:temp,isLoadingAllUsers:false,chatUser:temp[0]},()=>this.props._loadChats(this.state.currentUser,this.state.chatUser))
+					this.setState({allUsers:temp,isLoadingAllUsers:false,chatUser:temp[0]},
+						()=>this.props._loadChats(this.state.currentUser,this.state.chatUser)
+					)
 				}
 
 			).catch(e=>alert(e));
@@ -94,6 +108,7 @@ class Home extends React.Component {
 	}
 
 	_loadSingleChat=()=>{
+		debugger
 		const { classes,chats } = this.props;
 		if(chats && chats.allMsg.length>0 ) {
 			return chats.allMsg.map((item, index) => {
@@ -117,13 +132,15 @@ class Home extends React.Component {
 		}
 	}
 	_sendMsg=()=>{
+		debugger
 		const {currentUser,chatUser}=this.state
 _sendMsgAction(currentUser,chatUser,this.sendMsg).then(res=>{
-	console.log(res)
+	// console.log(res)
 })
 	}
 
 	render () {
+		debugger
 		const {currentUser,allUsers,isLoadingAllUsers,anchorEl,chatUser}=this.state
 		const { classes,chats } = this.props;
 		if (!localStorage.get("data")) {

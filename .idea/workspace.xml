@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49d407ed-8e6f-4ce2-8f41-8a9a3231b9ee" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Actions/HomeAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Actions/HomeAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Component/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Home.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Actions/HomeAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+            <state relative-caret-position="443">
+              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -34,10 +32,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Component/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1547">
-              <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
+            <state relative-caret-position="427">
+              <caret line="137" column="12" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="12" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#1776#1831#0" />
               </folding>
             </state>
           </provider>
@@ -85,9 +84,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image</find>
-      <find>textf</find>
-      <find>Text</find>
       <find>s</find>
       <find>icon</find>
       <find>Menu</find>
@@ -106,15 +102,18 @@
       <find>deb</find>
       <find>cons</find>
       <find>conso</find>
-      <find>_loadChats</find>
       <find>red</find>
       <find>chatUser</find>
       <find>_chatUserClick</find>
-      <find>_loadSingleChat</find>
-      <find>debugg</find>
       <find>omi</find>
       <find>Pr</find>
       <find>sendMsg</find>
+      <find>isLoadingChats</find>
+      <find>debugg</find>
+      <find>_loadSingleChat</find>
+      <find>_loadChats</find>
+      <find>console.l</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace>link</replace>
@@ -199,42 +198,6 @@
               <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="my_first_app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my_first_app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Store" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -243,6 +206,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Reducers" />
@@ -304,17 +268,19 @@
       <workItem from="1583557707612" duration="19492000" />
       <workItem from="1583727655565" duration="15605000" />
       <workItem from="1583899481055" duration="517000" />
-      <workItem from="1583929855189" duration="279000" />
+      <workItem from="1583929855189" duration="494000" />
+      <workItem from="1583989502949" duration="4113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136988000" />
+    <option name="totallyTimeSpent" value="141316000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1600" height="828" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19987147" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20244215" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -329,7 +295,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004314" side_tool="true" weight="0.62106705" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49956858" visible="true" weight="0.3668478" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49956858" weight="0.3668478" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -676,26 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actions/HomeAction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="120" column="5" selection-start-line="120" selection-start-column="5" selection-end-line="120" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Component/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -720,6 +666,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Constant/index.js">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="137" column="12" selection-start-line="137" selection-start-column="5" selection-end-line="137" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#1776#1831#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actions/HomeAction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

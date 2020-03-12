@@ -1,23 +1,22 @@
 import firebase from 'firebase';
 import { LOADCHATS } from '../Constant'
 export const _loadChats=(currentUser, chatUser)=>{
+	debugger
 	const db=firebase.firestore();
 	return dispatch => {
 		return db.collection("chats")
 			.onSnapshot((res) => {
-				console.log(res.docChanges())
-				// res.forEach(item=>{
-				// 	console.log(item.doc.data())
-				// })
-				dispatch(_loadUserChange(chatUser.id, currentUser.id))
+				// console.log(res.docChanges())
+				dispatch(_loadUserChange(currentUser,chatUser))
 			});
 	}
 }
 
 const _loadUserChange=(sender,reciver)=> {
+	debugger
 	const db = firebase.firestore();
 	return (dispatch, getState )=> {
-		return db.collection("chats").doc(`${sender}:${reciver}`)
+		return db.collection("chats").doc(`${sender.id}:${reciver.id}`)
 			.get()
 			.then((querySnapshot) => {
 					if (!querySnapshot.data()) {
@@ -36,9 +35,10 @@ const _loadUserChange=(sender,reciver)=> {
 }
 
 const _loadUserChangeReverse=(sender,reciver)=>{
+	debugger
 	const db=firebase.firestore();
 	return dispatch => {
-		return db.collection("chats").doc(`${sender}:${reciver}`)
+		return db.collection("chats").doc(`${sender.id}:${reciver.id}`)
 			.get()
 			.then((querySnapshot) => {
 					dispatch({
@@ -53,15 +53,11 @@ const _loadUserChangeReverse=(sender,reciver)=>{
 export const _sendMsgAction= async (sender,reciver,msg)=>{
 	debugger
 		await _isNewChat(sender.id,reciver.id).then( res=>{
-			debugger
 			_sendNewMsg(sender,reciver,msg,sender.email)
 		}).catch(res=>{
-			debugger
 			_isNewChat(reciver.id,sender.id).then(res=>{
-				debugger
 				_sendNewMsg(reciver,sender,msg,sender.email)
 			}).catch(res=>{
-				debugger
 				_newChatwithMsg(sender,reciver,msg)
 			})
 		})
@@ -74,7 +70,6 @@ const _isNewChat = async (sender,reciver)=>{
 	await db.collection("chats").doc(`${sender}:${reciver}`)
 			.get()
 			.then((querySnapshot) => {
-				debugger
 				temp=querySnapshot.data();
 				}
 			).catch(e => {
@@ -82,10 +77,8 @@ const _isNewChat = async (sender,reciver)=>{
 			 }
 		 );
 	if(temp){
-		debugger
 		return Promise.resolve(true)
 	}else {
-		debugger
 		return Promise.reject(false)
 	}
 
@@ -98,18 +91,18 @@ const _sendNewMsg=(sender,reciver,msg,senderEmail)=>{
 	db.collection("chats").doc(`${sender.id}:${reciver.id}`).update( {
 		allMsg: firebase.firestore.FieldValue.arrayUnion( temp )
 	}).then(res=>{
-		debugger
-		console.log(res)}).catch(e=>{
-			debugger
+		// console.log(res)
+	}).catch(e=>{
 			console.log(e)});
 }
 
 const _newChatwithMsg=(sender,reciver,msg)=>{
+	debugger
 	const db=firebase.firestore();
 	var temp={msg:msg,sender:sender.email,time:new Date()}
 	 db.collection("chats").doc(`${sender.id}:${reciver.id}`).set({
 		allMsg:[temp]
 	}).then(res=>{
-		debugger
-		console.log(res)}).catch(e=>console.log(e))
+		// console.log(res)
+	}).catch(e=>console.log(e))
 }
